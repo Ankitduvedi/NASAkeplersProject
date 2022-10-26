@@ -1,4 +1,11 @@
 const parse = require ('csv-parse');
 const fs = require('fs');
 
-fs.createReadStream('kepler_data.csv');
+const results = [];
+fs.createReadStream('kepler_data.csv')
+    .on('data', (data)=>{
+        results.push(data);
+    })
+    .on('end', ()=>{
+        console.log("Finished reading");
+    });
