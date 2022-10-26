@@ -3,10 +3,10 @@ const fs = require('fs');
 
 const results = [];
 
-function isHabitableplanet (planet){
-    return planet[koi_disposition] === 'CONFIRMED'
-        && planet[koi_insol] > '0.36' && planet[koi_insol] <= '1.11' 
-        && planet[koi_prad] < '1.6';
+function isHabitableplanet(planet){
+    return planet['koi_disposition'] === 'CONFIRMED'
+        && planet['koi_insol'] > '0.36' && planet['koi_insol'] <= '1.11' 
+        && planet['koi_prad'] < '1.6';
 }
 fs.createReadStream('kepler_data.csv')
     .pipe(parse({
@@ -23,6 +23,6 @@ fs.createReadStream('kepler_data.csv')
         console.log(error);
     })
     .on('end', ()=>{
-        console.log(results);
+        console.log(`${results.length} habitable planets are found`);
         console.log("Finished reading");
     });
