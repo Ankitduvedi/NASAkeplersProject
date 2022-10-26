@@ -7,5 +7,6 @@ fs.createReadStream('kepler_data.csv')
         results.push(data);
     })
     .on('end', ()=>{
+        console.log(results);
         console.log("Finished reading");
     });
