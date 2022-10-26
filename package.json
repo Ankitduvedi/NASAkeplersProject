@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Ankitduvedi/NASAkeplersProject/issues"
   },
-  "homepage": "https://github.com/Ankitduvedi/NASAkeplersProject#readme"
+  "homepage": "https://github.com/Ankitduvedi/NASAkeplersProject#readme",
+  "dependencies": {
+    "csv-parse": "^5.3.1"
+  }
 }
